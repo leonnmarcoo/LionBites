@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminHomeController">
+  <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #4CB050;">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="1000.0">
+               <image>
+                  <Image url="@Images/AdminHome.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="homeLabel" layoutX="279.0" layoutY="40.0" text="Welcome" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="adminTable" layoutX="566.0" layoutY="95.0" prefHeight="197.0" prefWidth="403.0" style="-fx-background-color: #E8E8E8; -fx-background-radius: 10;">
+              <columns>
+                <TableColumn fx:id="usernameColumn" prefWidth="200.99853515625" text="Username" />
+                <TableColumn fx:id="passwordColumn" prefWidth="202.00146484375" text="Password" />
+              </columns>
+            </TableView>
+            <TextField fx:id="usernameTextField" layoutX="278.0" layoutY="153.0" prefHeight="28.0" prefWidth="244.0" promptText="Enter your username" style="-fx-background-radius: 6;" />
+            <TextField fx:id="passwordTextField" layoutX="278.0" layoutY="214.0" prefHeight="28.0" prefWidth="244.0" promptText="Enter your password" style="-fx-background-radius: 6;" />
+            <Button fx:id="createButton" layoutX="278.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAdmin" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: #4CB050; -fx-background-radius: 20;" text="Create" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="10.0" />
+               </font></Button>
+            <Button fx:id="updateButton" layoutX="362.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#updateAdmin" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: #4CB050; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="10.0" />
+               </font></Button>
+            <Button fx:id="deleteButton" layoutX="447.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteAdmin" prefHeight="20.0" prefWidth="75.0" style="-fx-background-color: #4CB050; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="10.0" />
+               </font></Button>
+            <Button fx:id="customerButton" graphicTextGap="5.0" layoutX="25.0" layoutY="142.0" mnemonicParsing="false" onAction="#customerButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6;" text="Customer" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="13.0">
+                     <image>
+                        <Image url="@Images/Logo/Costumer%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="restaurantButton" graphicTextGap="5.0" layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#restaurantButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6;" text="Restaurant" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@Images/Logo/Restaurant%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="productButton" graphicTextGap="5.0" layoutX="25.0" layoutY="222.0" mnemonicParsing="false" onAction="#productButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6;" text="Product" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="12.0">
+                     <image>
+                        <Image url="@Images/Logo/Product%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="orderButton" graphicTextGap="5.0" layoutX="25.0" layoutY="262.0" mnemonicParsing="false" onAction="#orderButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6;" text="Order" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@Images/Logo/Order%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="categoryButton" graphicTextGap="5.0" layoutX="25.0" layoutY="302.0" mnemonicParsing="false" onAction="#categoryButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6;" text="Category" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="14.0">
+                     <image>
+                        <Image url="@Images/Logo/Categories%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="paymentmethodButton" graphicTextGap="5.0" layoutX="25.0" layoutY="342.0" mnemonicParsing="false" onAction="#paymentmethodButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 6;" text="Payment Method" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="17.0">
+                     <image>
+                        <Image url="@Images/Logo/Payment%20Method%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" graphicTextGap="5.0" layoutX="25.0" layoutY="552.0" mnemonicParsing="false" onAction="#logoutButtonHandler" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: #4CB050; -fx-background-radius: 6; -fx-border-color: #ffffff; -fx-border-radius: 6;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="18.0">
+                     <image>
+                        <Image url="@Images/Logo/Log%20out%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="255.0" fitWidth="691.0" layoutX="278.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Billboard.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="linkHyperlink" layoutX="278.0" layoutY="316.0" onAction="#linkHyperlink" prefHeight="255.0" prefWidth="691.0" style="-fx-border-radius: 20;" />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
