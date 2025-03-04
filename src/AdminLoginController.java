@@ -51,7 +51,6 @@ public class AdminLoginController {
             root = loader.load();
 
             AdminHomeController homeController = loader.getController();
-
             homeController.displayName(uname);
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

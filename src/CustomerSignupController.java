@@ -75,7 +75,7 @@ public class CustomerSignupController implements Initializable {
             alert.showAndWait();
         }
 
-        if (!firstname.matches("[A-Za-z]+") || !lastname.matches("[A-Za-z]+")) {
+        if (!firstname.matches("^[A-Za-z]+(?: [A-Za-z]+)*$") || !lastname.matches("^[A-Za-z]+(?: [A-Za-z]+)*$")) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setContentText("First name and Last name should contain only letters");
             alert.showAndWait();
@@ -96,7 +96,7 @@ public class CustomerSignupController implements Initializable {
             return;
         }
 
-        if (!district.matches("[A-Za-z]+") || !city.matches("[A-Za-z]+")) {
+        if (!district.matches("^[A-Za-z]+(?: [A-Za-z]+)*$") || !city.matches("^[A-Za-z]+(?: [A-Za-z]+)*$")) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setContentText("District and City should contain only letters");
             alert.showAndWait();
