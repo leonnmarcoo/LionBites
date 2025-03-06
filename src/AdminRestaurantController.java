@@ -149,13 +149,6 @@ public class AdminRestaurantController implements Initializable {
             return;
         }
 
-        if (!district.matches("[A-Za-z]+") || !city.matches("[A-Za-z]+")) {
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setContentText("District and City should contain only letters.");
-            alert.showAndWait();
-            return;
-        }
-
         Restaurant restaurant = new Restaurant(0, rname, rdistrict, rcity, categoryname);
 
         if (DatabaseHandler.addRestaurant(restaurant)) {
@@ -202,13 +195,6 @@ public class AdminRestaurantController implements Initializable {
         if (rname.isEmpty() || rdistrict.isEmpty() || rcity.isEmpty() || categoryname.isEmpty()) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setContentText("Please fill in all fields");
-            alert.showAndWait();
-            return;
-        }
-
-        if (!district.matches("[A-Za-z]+") || !city.matches("[A-Za-z]+")) {
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setContentText("District and City should contain only letters.");
             alert.showAndWait();
             return;
         }
