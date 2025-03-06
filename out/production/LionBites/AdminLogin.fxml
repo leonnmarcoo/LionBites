@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminLoginController">
+  <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="1000.0">
+               <image>
+                  <Image url="@Images/AdminLogin.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usernameTextField" layoutX="591.0" layoutY="318.0" prefHeight="27.6" prefWidth="312.0" promptText="Enter your username" style="-fx-background-radius: 6;">
+               <font>
+                  <Font name="Poppins Regular" size="13.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordPasswordField" layoutX="591.0" layoutY="379.0" prefHeight="27.6" prefWidth="312.0" promptText="Enter your password" style="-fx-background-radius: 6;">
+               <font>
+                  <Font name="Poppins Regular" size="13.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginButton" graphicTextGap="2.0" layoutX="594.0" layoutY="431.0" mnemonicParsing="false" onAction="#loginButtonHandler" prefHeight="36.0" prefWidth="312.0" style="-fx-background-color: #4CB050; -fx-background-radius: 25;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="clickhereButton" layoutX="750.0" layoutY="473.0" mnemonicParsing="false" onAction="#clickhereButtonHandler" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" text="Click here!" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="657.0" layoutY="478.0" text="Not an admin?" textFill="#b7b7b7">
+               <font>
+                  <Font name="Poppins Regular" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

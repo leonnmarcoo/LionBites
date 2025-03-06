@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminOrderController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="1000.0">
+               <image>
+                  <Image url="@Images/AdminOrder.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="paymentmethodTextField" layoutX="26.0" layoutY="143.0" prefHeight="28.0" prefWidth="215.0" promptText="Enter payment method" style="-fx-background-radius: 6;">
+               <font>
+                  <Font name="Poppins Regular" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="deliverypickupTextField" layoutX="26.0" layoutY="204.0" prefHeight="28.0" prefWidth="215.0" promptText="Enter mode" style="-fx-background-radius: 6;">
+               <font>
+                  <Font name="Poppins Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="updateButton" layoutX="26.0" layoutY="520.0" mnemonicParsing="false" onAction="#updateOrders" prefHeight="20.0" prefWidth="215.0" style="-fx-background-color: #4CB050; -fx-background-radius: 20;" text="UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteButton" layoutX="26.0" layoutY="546.0" mnemonicParsing="false" onAction="#deleteOrders" prefHeight="20.0" prefWidth="215.0" style="-fx-background-color: #4CB050; -fx-background-radius: 20;" text="DELETE" textFill="WHITE">
+               <font>
+                  <Font name="Poppins Bold" size="10.0" />
+               </font>
+            </Button>
+            <TableView fx:id="ordersTable" layoutX="269.0" layoutY="143.0" prefHeight="333.0" prefWidth="700.0" style="-fx-background-color: #E8E8E8; -fx-background-radius: 10;">
+              <columns>
+                <TableColumn fx:id="orderidColumn" prefWidth="60.0" text="Order ID" />
+                  <TableColumn fx:id="customeridColumn" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="firstnameColumn" prefWidth="70.0" text="First Name" />
+                  <TableColumn fx:id="lastnameColumn" minWidth="0.0" prefWidth="70.0" text="Last Name" />
+                  <TableColumn fx:id="orderColumn" prefWidth="100.0" text="Order" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="60.0" text="Quantity" />
+                  <TableColumn fx:id="amountColumn" prefWidth="60.0" text="Amount" />
+                  <TableColumn fx:id="paymentmethodColumn" prefWidth="100.0" text="Payment Method" />
+                  <TableColumn fx:id="districtColumn" minWidth="6.0" prefWidth="60.0" text="District" />
+                  <TableColumn fx:id="cityColumn" prefWidth="60.0" text="City" />
+                  <TableColumn fx:id="modeColumn" prefWidth="50.0" text="Mode" />
+              </columns>
+            </TableView>
+            <Button fx:id="backButton" layoutX="864.0" layoutY="538.0" mnemonicParsing="false" onAction="#backButtonHandler" prefHeight="28.0" prefWidth="100.0" style="-fx-background-radius: 6; -fx-border-color: #4CB050; -fx-border-radius: 6; -fx-border-width: 2; -fx-background-color: #ffffff;" text="Back" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@Images/Logo/Back%20Button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="customerButton" graphicTextGap="5.0" layoutX="269.0" layoutY="83.0" mnemonicParsing="false" onAction="#customerButtonHandler" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #edf7ed; -fx-background-radius: 6;" text="Customer" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="13.0">
+                     <image>
+                        <Image url="@Images/Logo/Costumer%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="restaurantButton" graphicTextGap="5.0" layoutX="387.0" layoutY="83.0" mnemonicParsing="false" onAction="#restaurantButtonHandler" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #EDF7ED; -fx-background-radius: 6;" text="Restaurant" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0">
+                     <image>
+                        <Image url="@Images/Logo/Restaurant%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="productButton" graphicTextGap="5.0" layoutX="505.0" layoutY="83.0" mnemonicParsing="false" onAction="#productButtonHandler" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #EDF7ED; -fx-background-radius: 6;" text="Product" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="12.0">
+                     <image>
+                        <Image url="@Images/Logo/Product%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="orderButton" graphicTextGap="5.0" layoutX="623.0" layoutY="83.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #4CB050; -fx-background-radius: 6;" text="Order" textFill="#edf7ed">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0">
+                     <image>
+                        <Image url="@Images/Logo/Secondary/Order%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="categoryButton" graphicTextGap="5.0" layoutX="741.0" layoutY="83.0" mnemonicParsing="false" onAction="#categoryButtonHandler" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #EDF7ED; -fx-background-radius: 6;" text="Category" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="14.0">
+                     <image>
+                        <Image url="@Images/Logo/Categories%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="paymentmethodButton" graphicTextGap="5.0" layoutX="859.0" layoutY="83.0" mnemonicParsing="false" onAction="#paymentmethodButtonHandler" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #EDF7ED; -fx-background-radius: 6;" text="Payment Method" textFill="#4cb050">
+               <font>
+                  <Font name="Poppins SemiBold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="13.0" fitWidth="17.0">
+                     <image>
+                        <Image url="@Images/Logo/Payment%20Method%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
