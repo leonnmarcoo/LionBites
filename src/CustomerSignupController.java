@@ -82,16 +82,16 @@ public class CustomerSignupController implements Initializable {
             return;
         }
 
-        if (!contactnumber.matches("\\d{11}")) {
+        if (!email.endsWith("@email.com")) {
             Alert alert = new Alert(AlertType.ERROR);
-            alert.setContentText("Contact number must contain exactly 11 digits and should not contain letters");
+            alert.setContentText("Email must end with '@email.com'");
             alert.showAndWait();
             return;
         }
 
-        if (!email.endsWith("@email.com")) {
+        if (!contactnumber.matches("\\d{11}")) {
             Alert alert = new Alert(AlertType.ERROR);
-            alert.setContentText("Email must end with '@email.com'");
+            alert.setContentText("Contact number must contain exactly 11 digits and should not contain letters");
             alert.showAndWait();
             return;
         }

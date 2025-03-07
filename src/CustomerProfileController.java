@@ -78,16 +78,6 @@ public class CustomerProfileController implements Initializable {
     private Scene scene;
     private Parent root;
 
-    // @Override
-    // public void initialize(URL url, ResourceBundle rb) {
-    //     nameLabel.setText(Session.customerFirstname + " " + Session.customerLastname);
-    //     customeridLabel.setText(String.valueOf("Customer ID: " + Session.customerID));
-    //     emailLabel.setText(Session.customerEmail);
-    //     phonenumberLabel.setText(Session.customerContactNumber);
-    //     districtLabel.setText(Session.customerDistrict);
-    //     cityLabel.setText(Session.customerCity);
-    // }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         initializeCol();

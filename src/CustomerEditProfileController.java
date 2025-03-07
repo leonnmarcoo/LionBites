@@ -127,20 +127,6 @@ public class CustomerEditProfileController implements Initializable {
             return;
         }
 
-        if (!DatabaseHandler.isUniqueEmail(email)) {
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setContentText("Email is already in use!");
-            alert.showAndWait();
-            return;
-        }
-        
-        if (!DatabaseHandler.isUniqueContactNumber(contactnumber)) {
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setContentText("Contact number is already in use!");
-            alert.showAndWait();
-            return;
-        }
-
         Customer updatedCustomer = new Customer(
             loggedInCustomer.getCustomerID(),
             firstname, lastname, contactnumber, email, district, city
